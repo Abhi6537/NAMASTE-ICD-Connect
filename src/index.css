@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 193 95% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 222 47% 11%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 242 90% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 142 71% 45%;
+    --warning: 38 92% 50%;
+    --info: 193 95% 45%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 193 95% 45%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 193 95% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 193 95% 45%;
+
+    --glow-primary: 193 95% 45%;
+    --glow-accent: 142 71% 45%;
+    
+    --shimmer-start: 0 0% 100%;
+    --shimmer-middle: 210 40% 98%;
+    --shimmer-end: 0 0% 100%;
+  }
+
+  .dark {
+    --background: 222 47% 5%;
+    --foreground: 210 40% 98%;
+
+    --card: 225 30% 10%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 225 30% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 175 100% 50%;
+    --primary-foreground: 222 47% 5%;
+
+    --secondary: 242 90% 65%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 142 71% 45%;
+    --accent-foreground: 222 47% 5%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --success: 142 71% 45%;
+    --warning: 38 92% 50%;
+    --info: 175 100% 50%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 175 100% 50%;
+
+    --sidebar-background: 222 47% 8%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 175 100% 50%;
+    --sidebar-primary-foreground: 222 47% 5%;
+    --sidebar-accent: 217 33% 15%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 33% 17%;
+    --sidebar-ring: 175 100% 50%;
+
+    --glow-primary: 175 100% 50%;
+    --glow-accent: 142 71% 45%;
+    
+    --shimmer-start: 225 30% 10%;
+    --shimmer-middle: 217 33% 17%;
+    --shimmer-end: 225 30% 10%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+  }
+}
+
+@layer utilities {
+  .glow-card {
+    @apply shadow-lg dark:shadow-[0_0_20px_rgba(0,255,170,0.15)];
+  }
+
+  .glow-card-hover {
+    @apply hover:shadow-[0_0_30px_rgba(0,255,170,0.25)] transition-all duration-300;
+  }
+
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      hsl(var(--shimmer-start)) 0%,
+      hsl(var(--shimmer-middle)) 50%,
+      hsl(var(--shimmer-end)) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  .neon-glow {
+    @apply dark:shadow-[0_0_15px_rgba(0,255,170,0.3)];
+  }
+}
