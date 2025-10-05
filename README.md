@@ -41,7 +41,7 @@ This system maps traditional NAMASTE medical terminologies to ICD-11 codes and g
 
 ### 1️⃣ Clone Repository
 ```bash
-git clone https://github.com/Abhi6537/NAMASTE-ICD-EMR-.git
+git clone https://github.com/Abhi6537/NAMASTE-ICD-Connect.git
 cd NAMASTE-ICD-EMR-
 2️⃣ Frontend Setup
 bash
@@ -50,16 +50,7 @@ npm install
 npm run dev
 Runs on http://localhost:5173
 
-3️⃣ Backend Setup
-bash
-Copy code
-cd backend
-python -m venv venv
-venv\Scripts\activate  # (Windows)
-source venv/bin/activate  # (Mac/Linux)
-pip install -r requirements.txt
-uvicorn main:app --reload
-Runs on http://localhost:8000
+
 
 🌐 API Overview
 Base URL: https://namaste-icd-api.vercel.app
@@ -81,25 +72,6 @@ Build: npm run build
 
 Output: dist
 
-Backend:
-
-Deploy on Vercel, Railway, or Render
-
-Update requirements.txt
-
-Configure environment variables if needed
-
-🌱 Environment Variables
-Frontend (.env)
-
-env
-Copy code
-VITE_API_BASE_URL=https://namaste-icd-api.vercel.app
-Backend (.env)
-
-env
-Copy code
-ICD11_API_KEY=your_key_here
 🤝 Contributing
 Fork the repository
 
@@ -118,3 +90,5 @@ WHO – ICD-11
 Ministry of AYUSH, Govt. of India – NAMASTE
 
 HL7 International – FHIR R4
+
+Live : https://namaste-icd-connect.vercel.app/
