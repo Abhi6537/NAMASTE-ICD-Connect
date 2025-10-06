@@ -91,4 +91,4 @@ Ministry of AYUSH, Govt. of India – NAMASTE
 
 HL7 International – FHIR R4
 
-Live : https://namaste-icd-connect.vercel.app/
+Live : https://ayubridge.vercel.app/

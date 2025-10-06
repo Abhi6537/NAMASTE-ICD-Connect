@@ -45,9 +45,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="font-bold text-small text-sidebar-primary"
+              className="font-bold text-xl text-sidebar-primary flex items-center gap-2"
             >
-              NAMASTE ICD Connect
+              <img 
+                src="/logo.png" 
+                alt="AyuBridge Logo" 
+                className="h-13 w-12 object-contain"
+              />
+              AYUBRIDGE
             </motion.div>
           )}
           <Button

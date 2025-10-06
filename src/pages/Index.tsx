@@ -464,11 +464,28 @@ export default function Index() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
+                   {/* Logo */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex justify-center mb-6"
+          >
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 rounded-full blur-2xl" />
+              <img 
+                src="/logo.png" 
+                alt="AyuBridge Logo" 
+                className="relative h-20 w-20"
+              />
+            </div>
+          </motion.div>
+
           <Badge className="mb-4 bg-primary/10 text-primary border-primary">
             NAMASTE-ICD-FHIR API
           </Badge>
-          <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-            Bridging Tradition with Global Health Standards
+          <h1 className="text-5xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+            Connecting traditional healing with global health standards
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
             Bridge the gap between traditional AYUSH medical systems and modern healthcare standards with seamless ICD-11 and FHIR integration
